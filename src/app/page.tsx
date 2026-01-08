@@ -436,36 +436,7 @@ export default function Home() {
               </div>
             </div>
             <div className="contact-form-wrapper">
-              <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-                <div className="form-row">
-                  <div className="form-group">
-                    <input type="text" className="form-input" placeholder="Your Name" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="tel" className="form-input" placeholder="Phone Number" required />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <input type="email" className="form-input" placeholder="Email Address" required />
-                </div>
-                <div className="form-group">
-                  <select className="form-input" required defaultValue="">
-                    <option value="" disabled>Select a Service</option>
-                    <option value="alcohol">Alcohol De-Addiction</option>
-                    <option value="drug">Drug De-Addiction</option>
-                    <option value="mental">Mental Health Care</option>
-                    <option value="behavioral">Behavioral Addictions</option>
-                    <option value="family">Family Counseling</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <textarea className="form-textarea" placeholder="Your Message" rows={4}></textarea>
-                </div>
-                <button type="submit" className="btn btn-blue" style={{ width: "100%" }}>
-                  Send Message <span>→</span>
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -539,5 +510,123 @@ export default function Home() {
         </svg>
       </a>
     </>
+  );
+}
+
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="form-row">
+        <div className="form-group">
+          <input
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            type="text"
+            className="form-input"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <input
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            type="tel"
+            className="form-input"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+      </div>
+      <div className="form-group">
+        <input
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          type="email"
+          className="form-input"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <select
+          name="service"
+          value={formData.service}
+          onChange={handleChange}
+          className="form-input"
+          required
+        >
+          <option value="" disabled>Select a Service</option>
+          <option value="alcohol">Alcohol De-Addiction</option>
+          <option value="drug">Drug De-Addiction</option>
+          <option value="mental">Mental Health Care</option>
+          <option value="behavioral">Behavioral Addictions</option>
+          <option value="family">Family Counseling</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div className="form-group">
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          className="form-textarea"
+          placeholder="Your Message"
+          rows={4}
+        ></textarea>
+      </div>
+      <button type="submit" className="btn btn-blue" style={{ width: "100%" }} disabled={status === "loading"}>
+        {status === "loading" ? "Sending..." : "Send Message"} <span>→</span>
+      </button>
+      {status === "success" && (
+        <p style={{ marginTop: "1rem", color: "green", fontWeight: "bold" }}>
+          Message sent successfully! We will contact you soon.
+        </p>
+      )}
+      {status === "error" && (
+        <p style={{ marginTop: "1rem", color: "red", fontWeight: "bold" }}>
+          Something went wrong. Please try again later.
+        </p>
+      )}
+    </form>
   );
 }
