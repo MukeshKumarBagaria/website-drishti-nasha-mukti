@@ -53,47 +53,25 @@ export default function Home() {
 
   return (
     <>
-      {/* Enhanced Navbar */}
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-inner">
-            <a href="#" className="navbar-logo">
-              <Image src="/logo.jpeg" alt="Drishti Logo" width={45} height={45} style={{ borderRadius: "10px" }} />
-              <span className="navbar-logo-text">Drishti <span>Nasha Mukti</span></span>
-            </a>
-            <ul className="navbar-menu">
-              <li><Link href="/about" className="navbar-link">About</Link></li>
-              <li><a href="#services" className="navbar-link" onClick={(e) => { e.preventDefault(); scrollToSection("services"); }}>Services</a></li>
-              <li><Link href="/gallery" className="navbar-link">Gallery</Link></li>
-              <li><a href="#contact" className="navbar-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>Contact</a></li>
-              <li><button className="navbar-cta" onClick={() => scrollToSection("contact")}>Get Help Now</button></li>
-            </ul>
-            <button className="mobile-menu-btn" aria-label="Menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Navbar moved to layout */}
 
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              <div className="hero-badge">
+              <div className="hero-badge" data-aos="fade-down">
                 <span className="hero-badge-dot"></span>
                 Since 2025 • Trusted Recovery Center
               </div>
-              <h1 className="hero-title">
+              <h1 className="hero-title" data-aos="fade-up" data-aos-delay="100">
                 Begin Your Journey to a <span className="hero-title-green">Nasha Mukt</span> Life
               </h1>
-              <p className="hero-description">
+              <p className="hero-description" data-aos="fade-up" data-aos-delay="200">
                 Ummeed ki Nazar, Nashamukt Safar — At Drishti Nasha Mukti Evam Manochikitsa Kendra, we provide compassionate,
                 evidence-based treatment for addiction recovery and mental wellness.
               </p>
-              <div className="hero-buttons">
+              <div className="hero-buttons" data-aos="fade-up" data-aos-delay="300">
                 <button className="btn btn-green" onClick={() => scrollToSection("contact")}>
                   Start Recovery Today
                   <span>→</span>
@@ -102,7 +80,7 @@ export default function Home() {
                   Learn More
                 </button>
               </div>
-              <div className="hero-stats">
+              <div className="hero-stats" data-aos="fade-up" data-aos-delay="400">
                 <div className="hero-stat">
                   <div className="hero-stat-number">5000+</div>
                   <div className="hero-stat-label">Lives Transformed</div>
@@ -117,7 +95,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="hero-visual">
+            <div className="hero-visual" data-aos="zoom-in" data-aos-delay="200">
               <div className="hero-image-container">
                 <div className="hero-image-ring"></div>
                 <div className="hero-image-ring"></div>
@@ -155,7 +133,7 @@ export default function Home() {
       <section className="about section" id="about">
         <div className="container">
           <div className="about-content">
-            <div className="about-image-wrapper">
+            <div className="about-image-wrapper" data-aos="fade-right">
               <div className="about-image-box">
                 <span className="about-image-icon">🏥</span>
               </div>
@@ -164,7 +142,7 @@ export default function Home() {
                 <p>Years of Excellence</p>
               </div>
             </div>
-            <div className="about-text">
+            <div className="about-text" data-aos="fade-left" data-aos-delay="200">
               <div className="section-badge">About Us</div>
               <h2>Reclaim Your Life with <span className="blue">Drishti</span></h2>
               <p>
@@ -221,7 +199,7 @@ export default function Home() {
             </p>
           </div>
           <div className="services-grid">
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up" data-aos-delay="0">
               <div className="service-icon"><span>🍺</span></div>
               <h3>Alcohol De-Addiction</h3>
               <p>Comprehensive treatment for alcohol dependency including medical detox and long-term support.</p>
@@ -229,7 +207,7 @@ export default function Home() {
                 Learn More <span>→</span>
               </a>
             </div>
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up" data-aos-delay="100">
               <div className="service-icon"><span>💊</span></div>
               <h3>Drug De-Addiction</h3>
               <p>Specialized treatment for drug abuse including opioids and prescription drug addiction.</p>
@@ -237,7 +215,7 @@ export default function Home() {
                 Learn More <span>→</span>
               </a>
             </div>
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up" data-aos-delay="200">
               <div className="service-icon"><span>🧠</span></div>
               <h3>Mental Health Care</h3>
               <p>Treatment for depression, anxiety, bipolar disorder with personalized care plans.</p>
@@ -245,7 +223,7 @@ export default function Home() {
                 Learn More <span>→</span>
               </a>
             </div>
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up" data-aos-delay="300">
               <div className="service-icon"><span>🎮</span></div>
               <h3>Behavioral Addictions</h3>
               <p>Help for gaming, social media, gambling and other behavioral dependencies.</p>
@@ -253,7 +231,7 @@ export default function Home() {
                 Learn More <span>→</span>
               </a>
             </div>
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up" data-aos-delay="400">
               <div className="service-icon"><span>👨‍👩‍👧‍👦</span></div>
               <h3>Family Counseling</h3>
               <p>Support for families affected by addiction to rebuild relationships.</p>
@@ -261,7 +239,7 @@ export default function Home() {
                 Learn More <span>→</span>
               </a>
             </div>
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up" data-aos-delay="500">
               <div className="service-icon"><span>🔄</span></div>
               <h3>Aftercare Program</h3>
               <p>Continued support with follow-up sessions and relapse prevention.</p>
@@ -284,22 +262,22 @@ export default function Home() {
             </p>
           </div>
           <div className="stats-grid">
-            <div className="stat-card">
+            <div className="stat-card" data-aos="zoom-in" data-aos-delay="0">
               <div className="stat-icon">👥</div>
               <div className="stat-number">{counters.patients.toLocaleString()}+</div>
               <div className="stat-label">Patients Treated</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" data-aos="zoom-in" data-aos-delay="100">
               <div className="stat-icon">📅</div>
               <div className="stat-number">{counters.years}+</div>
               <div className="stat-label">Years Experience</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" data-aos="zoom-in" data-aos-delay="200">
               <div className="stat-icon">👨‍⚕️</div>
               <div className="stat-number">{counters.doctors}+</div>
               <div className="stat-label">Expert Doctors</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" data-aos="zoom-in" data-aos-delay="300">
               <div className="stat-icon">✅</div>
               <div className="stat-number">{counters.success}%</div>
               <div className="stat-label">Success Rate</div>
@@ -319,7 +297,7 @@ export default function Home() {
             </p>
           </div>
           <div className="testimonials-grid">
-            <div className="testimonial-card">
+            <div className="testimonial-card" data-aos="fade-up" data-aos-delay="0">
               <div className="testimonial-quote">&ldquo;</div>
               <p className="testimonial-content">
                 Drishti gave me a second chance at life. The staff was incredibly supportive, and
@@ -337,7 +315,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="testimonial-card">
+            <div className="testimonial-card" data-aos="fade-up" data-aos-delay="150">
               <div className="testimonial-quote">&ldquo;</div>
               <p className="testimonial-content">
                 I was struggling with depression and substance abuse. The doctors here understood
@@ -355,7 +333,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="testimonial-card">
+            <div className="testimonial-card" data-aos="fade-up" data-aos-delay="300">
               <div className="testimonial-quote">&ldquo;</div>
               <p className="testimonial-content">
                 As a family, we were lost. The family counseling sessions at Drishti helped us
@@ -380,7 +358,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="cta">
         <div className="container">
-          <div className="cta-content">
+          <div className="cta-content" data-aos="zoom-in">
             <h2>Take the First Step Towards Recovery</h2>
             <p>
               You are not alone in this journey. Our team of experts is here to guide you
@@ -397,7 +375,7 @@ export default function Home() {
       <section className="contact section" id="contact">
         <div className="container">
           <div className="contact-content">
-            <div className="contact-info">
+            <div className="contact-info" data-aos="fade-right">
               <div className="section-badge green">Contact Us</div>
               <h2>Get in <span className="blue">Touch</span></h2>
               <p>
@@ -442,63 +420,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-brand">
-              <a href="#" className="navbar-logo">
-                <Image src="/logo.jpeg" alt="Drishti Logo" width={60} height={60} style={{ borderRadius: "12px" }} />
-              </a>
-              <p>
-                Drishti Nasha Mukti Evam Manochikitsa Kendra is dedicated to helping individuals
-                overcome addiction through compassionate care.
-              </p>
-              <div className="footer-social">
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="YouTube">▶️</a>
-              </div>
-            </div>
-            <div className="footer-column">
-              <h4>Quick Links</h4>
-              <ul className="footer-links">
-                <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>About Us</a></li>
-                <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection("services"); }}>Our Services</a></li>
-                <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection("testimonials"); }}>Success Stories</a></li>
-                <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>Contact Us</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>Services</h4>
-              <ul className="footer-links">
-                <li><a href="#services">Alcohol De-Addiction</a></li>
-                <li><a href="#services">Drug De-Addiction</a></li>
-                <li><a href="#services">Mental Health Care</a></li>
-                <li><a href="#services">Family Counseling</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>Contact Info</h4>
-              <ul className="footer-links">
-                <li><a href="tel:+919755209205">+91 9755209205</a></li>
-                <li><a href="mailto:drishtinashamuktikendra@gmail.com">drishtinashamuktikendra@gmail.com</a></li>
-                <li><a href="#">New Delhi, India</a></li>
-                <li><a href="#">24/7 Helpline</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>© 2025 Drishti Nasha Mukti Evam Manochikitsa Kendra. All rights reserved.</p>
-            <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Sitemap</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* Footer moved to layout */}
 
       {/* Floating Buttons */}
       <a href="tel:+919755209205" className="floating-btn floating-call" aria-label="Call Us">

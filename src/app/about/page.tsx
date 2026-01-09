@@ -7,23 +7,7 @@ export default function About() {
     return (
         <>
             {/* Navbar */}
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <div className="navbar-inner">
-                        <Link href="/" className="navbar-logo">
-                            <Image src="/logo.jpeg" alt="Drishti Logo" width={45} height={45} style={{ borderRadius: "10px" }} />
-                            <span className="navbar-logo-text">Drishti <span>Nasha Mukti</span></span>
-                        </Link>
-                        <ul className="navbar-menu">
-                            <li><Link href="/" className="navbar-link">Home</Link></li>
-                            <li><Link href="/about" className="navbar-link active">About</Link></li>
-                            <li><Link href="/gallery" className="navbar-link">Gallery</Link></li>
-                            <li><Link href="/#contact" className="navbar-link">Contact</Link></li>
-                            <li><Link href="/#contact" className="navbar-cta">Get Help Now</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            {/* Navbar moved to layout */}
 
             {/* Hero Section */}
             <section className="page-hero">
@@ -70,48 +54,6 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Story Section */}
-            <section className="story-section section">
-                <div className="container">
-                    <div className="section-header">
-                        <div className="section-badge">Our Story</div>
-                        <h2 className="section-title">A Journey of <span className="green">Hope</span></h2>
-                    </div>
-                    <div className="story-content">
-                        <div className="story-timeline">
-                            <div className="timeline-item">
-                                <div className="timeline-marker">2015</div>
-                                <div className="timeline-content">
-                                    <h4>The Beginning</h4>
-                                    <p>Founded with a vision to provide accessible and quality addiction treatment in India.</p>
-                                </div>
-                            </div>
-                            <div className="timeline-item">
-                                <div className="timeline-marker">2018</div>
-                                <div className="timeline-content">
-                                    <h4>Expansion</h4>
-                                    <p>Expanded our facilities to include mental health services and family counseling programs.</p>
-                                </div>
-                            </div>
-                            <div className="timeline-item">
-                                <div className="timeline-marker">2021</div>
-                                <div className="timeline-content">
-                                    <h4>Recognition</h4>
-                                    <p>Recognized for excellence in addiction treatment and rehabilitation services.</p>
-                                </div>
-                            </div>
-                            <div className="timeline-item">
-                                <div className="timeline-marker">2025</div>
-                                <div className="timeline-content">
-                                    <h4>Today</h4>
-                                    <p>Continuing to transform lives with 5000+ successful recoveries and counting.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Team Section */}
             <section className="team-section section">
                 <div className="container">
@@ -124,36 +66,56 @@ export default function About() {
                     </div>
                     <div className="team-grid">
                         <div className="team-card">
-                            <div className="team-avatar">
-                                <span>👨‍⚕️</span>
+                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <Image
+                                    src="/team/Syed_Farha_Ali_Managing Director_Psychologist.jpeg"
+                                    alt="Syed Farha Ali"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </div>
-                            <h3>Dr. Rajesh Sharma</h3>
-                            <p className="team-role">Chief Psychiatrist</p>
-                            <p className="team-bio">15+ years experience in addiction psychiatry and mental health care.</p>
+                            <h3>Syed Farha Ali</h3>
+                            <p className="team-role">Managing Director & Psychologist</p>
+                            <p className="team-bio">Guiding force behind Drishti's compassionate care approach.</p>
                         </div>
                         <div className="team-card">
-                            <div className="team-avatar">
-                                <span>👩‍⚕️</span>
+                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <Image
+                                    src="/team/Umesh_Singh_Meena_Director_ADVOCATE.jpeg"
+                                    alt="Umesh Singh Meena"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </div>
-                            <h3>Dr. Priya Verma</h3>
-                            <p className="team-role">Clinical Psychologist</p>
-                            <p className="team-bio">Specializes in cognitive behavioral therapy and trauma recovery.</p>
+                            <h3>Umesh Singh Meena</h3>
+                            <p className="team-role">Director & Advocate</p>
+                            <p className="team-bio">Dedicated to the legal and ethical standards of our center.</p>
                         </div>
                         <div className="team-card">
-                            <div className="team-avatar">
-                                <span>👨‍⚕️</span>
+                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <Image
+                                    src="/team/Aqsa_Ansar_Psychologist.jpeg"
+                                    alt="Aqsa Ansar"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </div>
-                            <h3>Dr. Amit Singh</h3>
-                            <p className="team-role">De-addiction Specialist</p>
-                            <p className="team-bio">Expert in medical detoxification and relapse prevention strategies.</p>
+                            <h3>Aqsa Ansar</h3>
+                            <p className="team-role">Psychologist</p>
+                            <p className="team-bio">Expert in psychological assessment and therapy.</p>
                         </div>
                         <div className="team-card">
-                            <div className="team-avatar">
-                                <span>🧘</span>
+                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <Image
+                                    src="/team/vivek_yadav_psychiatrist.jpeg"
+                                    alt="Vivek Yadav"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </div>
-                            <h3>Guru Ramesh</h3>
-                            <p className="team-role">Yoga & Meditation Expert</p>
-                            <p className="team-bio">20+ years experience in holistic healing and mindfulness practices.</p>
+                            <h3>Vivek Yadav</h3>
+                            <p className="team-role">Psychiatrist</p>
+                            <p className="team-bio">Specialist in psychiatric care and mental health recovery.</p>
                         </div>
                     </div>
                 </div>
@@ -275,50 +237,7 @@ export default function About() {
             </section>
 
             {/* Footer */}
-            <footer className="footer">
-                <div className="container">
-                    <div className="footer-content">
-                        <div className="footer-brand">
-                            <Link href="/" className="navbar-logo">
-                                <Image src="/logo.jpeg" alt="Drishti Logo" width={60} height={60} style={{ borderRadius: "12px" }} />
-                            </Link>
-                            <p>
-                                Drishti Nasha Mukti Evam Manochikitsa Kendra is dedicated to helping individuals
-                                overcome addiction through compassionate care.
-                            </p>
-                        </div>
-                        <div className="footer-column">
-                            <h4>Quick Links</h4>
-                            <ul className="footer-links">
-                                <li><Link href="/about">About Us</Link></li>
-                                <li><Link href="/#services">Our Services</Link></li>
-                                <li><Link href="/gallery">Gallery</Link></li>
-                                <li><Link href="/#contact">Contact Us</Link></li>
-                            </ul>
-                        </div>
-                        <div className="footer-column">
-                            <h4>Services</h4>
-                            <ul className="footer-links">
-                                <li><Link href="/#services">Alcohol De-Addiction</Link></li>
-                                <li><Link href="/#services">Drug De-Addiction</Link></li>
-                                <li><Link href="/#services">Mental Health Care</Link></li>
-                                <li><Link href="/#services">Family Counseling</Link></li>
-                            </ul>
-                        </div>
-                        <div className="footer-column">
-                            <h4>Contact Info</h4>
-                            <ul className="footer-links">
-                                <li><a href="tel:+919755209205">+91 9755209205</a></li>
-                                <li><a href="mailto:drishtinashamuktikendra@gmail.com">drishtinashamuktikendra@gmail.com</a></li>
-                                <li><a href="#">24/7 Helpline</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="footer-bottom">
-                        <p>© 2025 Drishti Nasha Mukti Evam Manochikitsa Kendra. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
+            {/* Footer moved to layout */}
 
             {/* Floating Buttons */}
             <a href="tel:+919755209205" className="floating-btn floating-call" aria-label="Call Us">

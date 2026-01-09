@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import AOSInit from "@/components/AOSInit";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <AOSInit />
+        <Navbar />
         {children}
+        <Footer />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-6QNC2C3DWB" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`

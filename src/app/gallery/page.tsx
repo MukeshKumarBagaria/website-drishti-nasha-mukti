@@ -10,22 +10,24 @@ export default function Gallery() {
     const [currentImage, setCurrentImage] = useState(0);
 
     const galleryItems = [
-        { id: 1, type: "image", category: "events", title: "Annual Recovery Celebration", size: "large" },
-        { id: 2, type: "image", category: "facilities", title: "Meditation Hall", size: "medium" },
-        { id: 3, type: "image", category: "therapy", title: "Group Therapy Session", size: "small" },
-        { id: 4, type: "image", category: "events", title: "Yoga Day Celebration", size: "small" },
-        { id: 5, type: "image", category: "facilities", title: "Patient Rooms", size: "medium" },
-        { id: 6, type: "image", category: "therapy", title: "Art Therapy Workshop", size: "large" },
-        { id: 7, type: "image", category: "events", title: "Family Counseling Day", size: "medium" },
-        { id: 8, type: "image", category: "facilities", title: "Garden Area", size: "small" },
-        { id: 9, type: "image", category: "therapy", title: "Music Therapy", size: "small" },
-        { id: 10, type: "image", category: "events", title: "World Mental Health Day", size: "medium" },
-        { id: 11, type: "image", category: "facilities", title: "Recreation Room", size: "large" },
-        { id: 12, type: "image", category: "therapy", title: "Counseling Session", size: "small" },
+        // Rehab Center Images
+        { id: 13, type: "image", category: "rehab-center", title: "Rehab Centre View 1", size: "large", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.57 (1).jpeg" },
+        { id: 14, type: "image", category: "rehab-center", title: "Rehab Centre View 2", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.57.jpeg" },
+        { id: 15, type: "image", category: "rehab-center", title: "Rehab Centre View 3", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.58 (1).jpeg" },
+        { id: 16, type: "image", category: "rehab-center", title: "Rehab Centre View 4", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.58.jpeg" },
+        { id: 17, type: "image", category: "rehab-center", title: "Rehab Centre View 5", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.59.jpeg" },
+        { id: 18, type: "image", category: "rehab-center", title: "Rehab Centre View 6", size: "large", src: "/centre/WhatsApp Image 2026-01-09 at 13.06.38 (1).jpeg" },
+        { id: 19, type: "image", category: "rehab-center", title: "Rehab Centre View 7", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.06.38.jpeg" },
+        { id: 20, type: "image", category: "rehab-center", title: "Rehab Centre View 8", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.06.39.jpeg" },
+        { id: 21, type: "image", category: "rehab-center", title: "Rehab Centre View 9", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.29 (1).jpeg" },
+        { id: 22, type: "image", category: "rehab-center", title: "Rehab Centre View 10", size: "large", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.29 (2).jpeg" },
+        { id: 23, type: "image", category: "rehab-center", title: "Rehab Centre View 11", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.29.jpeg" },
+        { id: 24, type: "image", category: "rehab-center", title: "Rehab Centre View 12", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.30.jpeg" },
     ];
 
     const filters = [
         { id: "all", label: "All" },
+        { id: "rehab-center", label: "Rehab Center" },
         { id: "events", label: "Events" },
         { id: "facilities", label: "Facilities" },
         { id: "therapy", label: "Therapy Sessions" },
@@ -55,23 +57,7 @@ export default function Gallery() {
     return (
         <>
             {/* Navbar */}
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <div className="navbar-inner">
-                        <Link href="/" className="navbar-logo">
-                            <Image src="/logo.jpeg" alt="Drishti Logo" width={45} height={45} style={{ borderRadius: "10px" }} />
-                            <span className="navbar-logo-text">Drishti <span>Nasha Mukti</span></span>
-                        </Link>
-                        <ul className="navbar-menu">
-                            <li><Link href="/" className="navbar-link">Home</Link></li>
-                            <li><Link href="/about" className="navbar-link">About</Link></li>
-                            <li><Link href="/gallery" className="navbar-link active">Gallery</Link></li>
-                            <li><Link href="/#contact" className="navbar-link">Contact</Link></li>
-                            <li><Link href="/#contact" className="navbar-cta">Get Help Now</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            {/* Navbar moved to layout */}
 
             {/* Hero Section */}
             <section className="page-hero">
@@ -100,30 +86,49 @@ export default function Gallery() {
                         ))}
                     </div>
 
-                    {/* Bento Grid */}
-                    <div className="bento-grid">
-                        {filteredItems.map((item, index) => (
-                            <div
-                                key={item.id}
-                                className={`bento-item bento-${item.size}`}
-                                onClick={() => openLightbox(index)}
-                            >
-                                <div className="bento-item-inner">
-                                    <div className="bento-placeholder">
-                                        <span className="bento-icon">
-                                            {item.category === 'events' ? '🎉' :
-                                                item.category === 'facilities' ? '🏥' : '🧘'}
-                                        </span>
-                                    </div>
-                                    <div className="bento-overlay">
-                                        <span className="bento-category">{item.category}</span>
-                                        <h3 className="bento-title">{item.title}</h3>
-                                        <span className="bento-view">Click to view</span>
+                    {/* Bento Grid or Coming Soon */}
+                    {filteredItems.length > 0 ? (
+                        <div className="bento-grid">
+                            {filteredItems.map((item, index) => (
+                                <div
+                                    key={item.id}
+                                    className={`bento-item bento-${item.size}`}
+                                    onClick={() => openLightbox(index)}
+                                >
+                                    <div className="bento-item-inner">
+                                        <div className="bento-placeholder">
+                                            {item.src ? (
+                                                <Image
+                                                    src={item.src}
+                                                    alt={item.title}
+                                                    fill
+                                                    style={{ objectFit: 'cover' }}
+                                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                                />
+                                            ) : (
+                                                <span className="bento-icon">
+                                                    {item.category === 'events' ? '🎉' :
+                                                        item.category === 'facilities' ? '🏥' :
+                                                            item.category === 'rehab-center' ? '🏢' : '🧘'}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div className="bento-overlay">
+                                            <span className="bento-category">{item.category}</span>
+                                            <h3 className="bento-title">{item.title}</h3>
+                                            <span className="bento-view">Click to view</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="coming-soon">
+                            <div className="coming-soon-icon">🚀</div>
+                            <h2>Coming Soon</h2>
+                            <p>We are currently curating the best moments for this section. Stay tuned!</p>
+                        </div>
+                    )}
 
                     {/* Upload Notice */}
                     <div className="gallery-notice">
@@ -140,12 +145,25 @@ export default function Gallery() {
                     <button className="lightbox-prev" onClick={(e) => { e.stopPropagation(); prevImage(); }}>‹</button>
                     <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
                         <div className="lightbox-placeholder">
-                            <span className="lightbox-icon">
-                                {filteredItems[currentImage]?.category === 'events' ? '🎉' :
-                                    filteredItems[currentImage]?.category === 'facilities' ? '🏥' : '🧘'}
-                            </span>
-                            <h3>{filteredItems[currentImage]?.title}</h3>
-                            <p>Image placeholder - Add your photos here</p>
+                            {filteredItems[currentImage]?.src ? (
+                                <Image
+                                    src={filteredItems[currentImage].src!}
+                                    alt={filteredItems[currentImage].title}
+                                    fill
+                                    style={{ objectFit: 'contain' }}
+                                    sizes="90vw"
+                                />
+                            ) : (
+                                <>
+                                    <span className="lightbox-icon">
+                                        {filteredItems[currentImage]?.category === 'events' ? '🎉' :
+                                            filteredItems[currentImage]?.category === 'facilities' ? '🏥' :
+                                                filteredItems[currentImage]?.category === 'rehab-center' ? '🏢' : '🧘'}
+                                    </span>
+                                    <h3>{filteredItems[currentImage]?.title}</h3>
+                                    <p>Image placeholder - Add your photos here</p>
+                                </>
+                            )}
                         </div>
                     </div>
                     <button className="lightbox-next" onClick={(e) => { e.stopPropagation(); nextImage(); }}>›</button>
@@ -170,50 +188,7 @@ export default function Gallery() {
             </section>
 
             {/* Footer */}
-            <footer className="footer">
-                <div className="container">
-                    <div className="footer-content">
-                        <div className="footer-brand">
-                            <Link href="/" className="navbar-logo">
-                                <Image src="/logo.jpeg" alt="Drishti Logo" width={60} height={60} style={{ borderRadius: "12px" }} />
-                            </Link>
-                            <p>
-                                Drishti Nasha Mukti Evam Manochikitsa Kendra is dedicated to helping individuals
-                                overcome addiction through compassionate care.
-                            </p>
-                        </div>
-                        <div className="footer-column">
-                            <h4>Quick Links</h4>
-                            <ul className="footer-links">
-                                <li><Link href="/about">About Us</Link></li>
-                                <li><Link href="/#services">Our Services</Link></li>
-                                <li><Link href="/gallery">Gallery</Link></li>
-                                <li><Link href="/#contact">Contact Us</Link></li>
-                            </ul>
-                        </div>
-                        <div className="footer-column">
-                            <h4>Services</h4>
-                            <ul className="footer-links">
-                                <li><Link href="/#services">Alcohol De-Addiction</Link></li>
-                                <li><Link href="/#services">Drug De-Addiction</Link></li>
-                                <li><Link href="/#services">Mental Health Care</Link></li>
-                                <li><Link href="/#services">Family Counseling</Link></li>
-                            </ul>
-                        </div>
-                        <div className="footer-column">
-                            <h4>Contact Info</h4>
-                            <ul className="footer-links">
-                                <li><a href="tel:+919755209205">+91 9755209205</a></li>
-                                <li><a href="mailto:drishtinashamuktikendra@gmail.com">drishtinashamuktikendra@gmail.com</a></li>
-                                <li><a href="#">24/7 Helpline</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="footer-bottom">
-                        <p>© 2025 Drishti Nasha Mukti Evam Manochikitsa Kendra. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
+            {/* Footer moved to layout */}
 
             {/* Floating Buttons */}
             <a href="tel:+919755209205" className="floating-btn floating-call" aria-label="Call Us">
