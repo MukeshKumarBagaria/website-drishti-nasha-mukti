@@ -62,12 +62,20 @@ export default function HeroSlider() {
                         <div className="hero-slide-content">
                             <h1 className="hero-title">{slide.title}</h1>
                             <p className="hero-subtitle">{slide.subtitle}</p>
-                            <button
-                                className="btn btn-green"
-                                onClick={() => scrollToSection("contact")}
-                            >
-                                {slide.cta} <span>→</span>
-                            </button>
+                            <div className="hero-buttons">
+                                <a
+                                    href="tel:+919755209205"
+                                    className="btn btn-green"
+                                >
+                                    📞 +91 9755209205
+                                </a>
+                                <a
+                                    href="tel:+919755369205"
+                                    className="btn btn-white"
+                                >
+                                    📞 +91 9755369205
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
