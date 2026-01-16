@@ -78,19 +78,7 @@ export default function About() {
                             <p className="team-role">Managing Director & Psychologist</p>
                             <p className="team-bio">Guiding force behind Drishti's compassionate care approach.</p>
                         </div>
-                        <div className="team-card">
-                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
-                                <Image
-                                    src="/team/Umesh_Singh_Meena_Director_ADVOCATE.jpeg"
-                                    alt="Umesh Singh Meena"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                />
-                            </div>
-                            <h3>Umesh Singh Meena</h3>
-                            <p className="team-role">Director & Advocate</p>
-                            <p className="team-bio">Dedicated to the legal and ethical standards of our center.</p>
-                        </div>
+
                         <div className="team-card">
                             <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
                                 <Image

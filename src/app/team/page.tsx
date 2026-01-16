@@ -14,14 +14,6 @@ const teamMembers = [
     },
     {
         id: 2,
-        name: 'Umesh Singh Meena',
-        designation: 'Director & Advocate',
-        image: '/team/Umesh_Singh_Meena_Director_ADVOCATE.jpeg',
-        linkedin: '#',
-        twitter: '#'
-    },
-    {
-        id: 3,
         name: 'Aqsa Ansar',
         designation: 'Psychologist',
         image: '/team/Aqsa_Ansar_Psychologist.jpeg',
@@ -29,7 +21,7 @@ const teamMembers = [
         twitter: '#'
     },
     {
-        id: 4,
+        id: 3,
         name: 'Vivek Yadav',
         designation: 'Psychiatrist',
         image: '/team/vivek_yadav_psychiatrist.jpeg',
