@@ -82,19 +82,6 @@ export default function About() {
                         <div className="team-card">
                             <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
                                 <Image
-                                    src="/team/Aqsa_Ansar_Psychologist.jpeg"
-                                    alt="Aqsa Ansar"
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                />
-                            </div>
-                            <h3>Aqsa Ansar</h3>
-                            <p className="team-role">(Psychologist)</p>
-                            <p className="team-bio">Expert in psychological assessment and therapy.</p>
-                        </div>
-                        <div className="team-card">
-                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
-                                <Image
                                     src="/team/vivek_yadav_psychiatrist.jpeg"
                                     alt="Vivek Yadav"
                                     fill
@@ -104,6 +91,20 @@ export default function About() {
                             <h3>Vivek Yadav</h3>
                             <p className="team-role">(Psychiatrist)</p>
                             <p className="team-bio">Specialist in psychiatric care and mental health recovery.</p>
+                        </div>
+
+                        <div className="team-card">
+                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <Image
+                                    src="/team/Aqsa_Ansar_Psychologist.jpeg"
+                                    alt="Aqsa Ansar"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </div>
+                            <h3>Aqsa Ansar</h3>
+                            <p className="team-role">(Psychologist)</p>
+                            <p className="team-bio">Expert in psychological assessment and therapy.</p>
                         </div>
                         <div className="team-card">
                             <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>

@@ -14,17 +14,17 @@ const teamMembers = [
     },
     {
         id: 2,
-        name: 'Aqsa Ansar',
-        designation: '(Psychologist)',
-        image: '/team/Aqsa_Ansar_Psychologist.jpeg',
+        name: 'Vivek Yadav',
+        designation: '(Psychiatrist)',
+        image: '/team/vivek_yadav_psychiatrist.jpeg',
         linkedin: '#',
         twitter: '#'
     },
     {
         id: 3,
-        name: 'Vivek Yadav',
-        designation: '(Psychiatrist)',
-        image: '/team/vivek_yadav_psychiatrist.jpeg',
+        name: 'Aqsa Ansar',
+        designation: '(Psychologist)',
+        image: '/team/Aqsa_Ansar_Psychologist.jpeg',
         linkedin: '#',
         twitter: '#'
     },

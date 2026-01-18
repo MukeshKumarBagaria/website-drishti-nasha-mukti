@@ -3,6 +3,7 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 import AOSInit from "@/components/AOSInit";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Navbar />
         </div>
         {children}
+        <FloatingCTA />
         <Footer />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-6QNC2C3DWB" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">

@@ -102,7 +102,6 @@ export default function Home() {
               { title: "12 Step", icon: "👣" },
               { title: "AA & NA Meetings", icon: "🤝" },
               { title: "Alcoholism Treatment", icon: "🍷" },
-              { title: "Ayurveda Treatment", icon: "🌿" },
               { title: "Depression", icon: "🌦️" },
               { title: "Detoxification", icon: "💧" },
               { title: "Drug Addiction Treatment", icon: "💊" },
@@ -146,15 +145,13 @@ export default function Home() {
             <div className="testimonial-card" data-aos="fade-up" data-aos-delay="0">
               <div className="testimonial-quote">&ldquo;</div>
               <p className="testimonial-content">
-                Drishti gave me a second chance at life. The staff was incredibly supportive, and
-                the holistic approach helped me address not just my addiction but the underlying
-                issues. I have been sober for 2 years now!
+                मैं 8 साल से शराब की लत में फंसा था। मेरे परिवार ने उम्मीद छोड़ दी थी। दृष्टि नशा मुक्ति केंद्र ने मुझे नई जिंदगी दी। यहां के डॉक्टर्स और काउंसलर्स ने बहुत प्यार से मेरा इलाज किया। आज मैं 3 साल से नशा मुक्त हूं और अपने बच्चों के साथ खुशी से रह रहा हूं। धन्यवाद दृष्टि टीम!
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">RK</div>
+                <div className="testimonial-avatar">VK</div>
                 <div className="testimonial-info">
-                  <h4>Rajesh Kumar</h4>
-                  <p>Recovered from Alcohol Addiction</p>
+                  <h4>विकास कुमार</h4>
+                  <p>शराब की लत से मुक्त • 3 साल नशा मुक्त</p>
                   <div className="testimonial-rating">
                     <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
                   </div>
@@ -164,15 +161,13 @@ export default function Home() {
             <div className="testimonial-card" data-aos="fade-up" data-aos-delay="150">
               <div className="testimonial-quote">&ldquo;</div>
               <p className="testimonial-content">
-                I was struggling with depression and substance abuse. The doctors here understood
-                my dual diagnosis and created a treatment plan that worked. Today, I am living
-                my best life with my family.
+                I was addicted to drugs for over 10 years and had tried multiple rehab centers before. Drishti was different - the medical detox was safe and comfortable, the counseling sessions helped me understand my triggers, and the yoga and meditation gave me inner peace. The 24/7 support from the staff made all the difference. I've been clean for 2 years now and have rebuilt my career and relationships. Forever grateful!
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">PS</div>
+                <div className="testimonial-avatar">AS</div>
                 <div className="testimonial-info">
-                  <h4>Priya Sharma</h4>
-                  <p>Overcame Depression &amp; Addiction</p>
+                  <h4>Arjun Singh</h4>
+                  <p>Recovered from Drug Addiction • 2 Years Clean</p>
                   <div className="testimonial-rating">
                     <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
                   </div>
@@ -182,15 +177,13 @@ export default function Home() {
             <div className="testimonial-card" data-aos="fade-up" data-aos-delay="300">
               <div className="testimonial-quote">&ldquo;</div>
               <p className="testimonial-content">
-                As a family, we were lost. The family counseling sessions at Drishti helped us
-                understand addiction and support my brother&apos;s recovery. We are closer than ever
-                now. Thank you, Drishti!
+                My son was struggling with tobacco and alcohol addiction along with severe depression. We were desperate and didn't know where to turn. Drishti's team not only treated his addiction but also addressed his mental health issues with proper medication and therapy. The family counseling sessions helped us understand how to support him better. Today, he is healthy, working, and living a normal life. This center truly saved our family.
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">AM</div>
+                <div className="testimonial-avatar">RM</div>
                 <div className="testimonial-info">
-                  <h4>Amit Mehta</h4>
-                  <p>Family Member</p>
+                  <h4>Rajesh Malhotra</h4>
+                  <p>Father of Recovered Patient</p>
                   <div className="testimonial-rating">
                     <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
                   </div>

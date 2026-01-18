@@ -7,23 +7,23 @@ const slides = [
     {
         id: 1,
         image: "/centre/4.jpeg",
-        title: "Begin Your Journey to",
-        titleHighlight: "Freedom",
-        subtitle: "Compassionate care and evidence-based treatment for a healthier, addiction-free tomorrow.",
+        title: "De-Addiction Treatment for",
+        titleHighlight: "Drugs, Alcohol & Tobacco",
+        subtitle: "Professional rehabilitation center offering medical detox, counseling, and holistic recovery programs.",
     },
     {
         id: 2,
         image: "/centre/10.jpeg",
-        title: "Holistic Healing for",
-        titleHighlight: "Mind & Body",
-        subtitle: "Expert medical detox, therapy, and yoga sessions in a serene, supportive environment.",
+        title: "Break Free from",
+        titleHighlight: "All Types of Addiction",
+        subtitle: "Expert care for substance abuse, behavioral addictions, and mental health disorders.",
     },
     {
         id: 3,
         image: "/centre/6.jpeg",
-        title: "Reclaim Your",
-        titleHighlight: "Life Today",
-        subtitle: "Join a community dedicated to your lasting recovery and mental wellness.",
+        title: "24/7 Nasha Mukti",
+        titleHighlight: "Rehabilitation Center",
+        subtitle: "Government registered facility with experienced doctors, therapists, and complete recovery support.",
     }
 ];
 
@@ -92,7 +92,7 @@ export default function HeroSlider() {
                     {/* Trust Badge */}
                     <div className="hero-trust-badge">
                         <span className="trust-dot"></span>
-                        <span>Government Registered • 24/7 Support Available</span>
+                        <span>De-Addiction & Rehabilitation Center • 24/7 Support</span>
                     </div>
 
                     {/* Title */}
@@ -110,23 +110,18 @@ export default function HeroSlider() {
 
                     {/* CTA Buttons */}
                     <div className="hero-cta-group">
-                        <a href="tel:+919755209205" className="hero-cta hero-cta-primary">
+                        <a href="tel:+919755209205" className="hero-cta hero-cta-call">
                             <span className="cta-icon">📞</span>
                             <span className="cta-content">
-                                <span className="cta-label">Call Now - Free Consultation</span>
-                                <span className="cta-number">+91 9755209205</span>
+                                <span className="cta-label">Call us</span>
+                                <span className="cta-number">9755209205</span>
                             </span>
                         </a>
-                        <a
-                            href="https://wa.me/919755209205?text=Hi%2C%20I%20need%20help%20with%20addiction%20treatment"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hero-cta hero-cta-secondary"
-                        >
-                            <span className="cta-icon">💬</span>
+                        <a href="tel:+919755209205" className="hero-cta hero-cta-enquiry">
+                            <span className="cta-icon">📝</span>
                             <span className="cta-content">
-                                <span className="cta-label">WhatsApp Us</span>
-                                <span className="cta-number">Quick Response</span>
+                                <span className="cta-label">Enquiry us</span>
+                                <span className="cta-number">9755209205</span>
                             </span>
                         </a>
                     </div>

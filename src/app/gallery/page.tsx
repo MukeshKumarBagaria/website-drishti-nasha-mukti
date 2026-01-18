@@ -10,6 +10,23 @@ export default function Gallery() {
     const [currentImage, setCurrentImage] = useState(0);
 
     const galleryItems = [
+        // Events
+        {
+            id: 1,
+            type: "image",
+            category: "events",
+            title: "It was a great honor and privilege to welcome Padma Shri Agus Indra Udayana. Your presence inspired us and added immense value to this occasion. In an international conference in Bhopal MP",
+            size: "large",
+            src: "/events/event-1.jpeg"
+        },
+        {
+            id: 2,
+            type: "image",
+            category: "events",
+            title: "Congratulations 🎉 on the very first sensitisation program and training on screen time consequences (Addiction) in Madhya Pradesh in the auspicious presence of the State Health Minister.",
+            size: "large",
+            src: "/events/event-2.jpeg"
+        },
         // Rehab Center Images
         { id: 13, type: "image", category: "rehab-center", title: "Rehab Centre View 1", size: "large", src: "/centre/1.jpeg" },
         { id: 14, type: "image", category: "rehab-center", title: "Rehab Centre View 2", size: "medium", src: "/centre/2.jpeg" },
